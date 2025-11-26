@@ -1,0 +1,54 @@
+# ===== Credentials & secrets =====
+# Firebase / Google Cloud service account files
+centralized-data-platform/backend/firebase_config.json
+backend/firebase_config.json
+# common service account names
+serviceAccountKey.json
+google-services.json
+firebase*.json
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+.env.production
+.env.development
+
+# Private keys, certs
+*.pem
+*.key
+*.p12
+
+# ===== Node / Python / build =====
+node_modules/
+dist/
+build/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and runtime files
+logs/
+*.log
+
+# IDE specific
+*.sublime-workspace
+*.sublime-project
+
+# Mac / Linux / Windows junk
+*.swp
+*.tmp

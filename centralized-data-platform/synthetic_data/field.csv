@@ -1,0 +1,589 @@
+Date,Bike_Model,Failure_Type,Bike_Mileage,Severity,Repair_Cost
+2024-01-01,Hero Splendor,Wear-out,18585,High,1093
+2024-01-01,Honda Shine,Wear-out,3439,High,545
+2024-01-01,Bajaj Pulsar,Noise,42560,Low,1206
+2024-01-01,Hero Splendor,Overheating,33921,Medium,755
+2024-01-01,Honda Shine,Reduced Braking,42682,Low,1451
+2024-01-02,Honda Shine,Noise,37766,Low,904
+2024-01-02,TVS Apache,Wear-out,35061,Low,397
+2024-01-02,TVS Apache,Noise,23740,High,1465
+2024-01-02,Honda Shine,Wear-out,22906,Low,1339
+2024-01-02,TVS Apache,Noise,49707,Medium,506
+2024-01-03,Bajaj Pulsar,Noise,35776,High,856
+2024-01-03,Bajaj Pulsar,Overheating,38041,High,1012
+2024-01-03,Bajaj Pulsar,Overheating,36890,High,1211
+2024-01-03,Honda Shine,Overheating,40396,Low,245
+2024-01-03,Bajaj Pulsar,Noise,47737,Medium,1408
+2024-01-03,TVS Apache,Wear-out,33530,Low,1220
+2024-01-03,Bajaj Pulsar,Noise,48839,Low,931
+2024-01-03,Hero Splendor,Wear-out,38750,Medium,1330
+2024-01-03,Bajaj Pulsar,Noise,29907,High,1454
+2024-01-03,Honda Shine,Wear-out,4181,High,1026
+2024-01-04,Honda Shine,Overheating,33354,Medium,522
+2024-01-04,TVS Apache,Reduced Braking,49585,Low,1055
+2024-01-04,Hero Splendor,Vibration,26054,Medium,894
+2024-01-04,Honda Shine,Reduced Braking,47050,Low,565
+2024-01-04,Hero Splendor,Noise,43998,High,1010
+2024-01-04,Hero Splendor,Overheating,44769,Medium,410
+2024-01-04,Honda Shine,Reduced Braking,26583,Medium,1310
+2024-01-05,Hero Splendor,Overheating,5643,Medium,456
+2024-01-05,Honda Shine,Reduced Braking,22026,Medium,1360
+2024-01-05,Hero Splendor,Noise,45453,Medium,395
+2024-01-05,Bajaj Pulsar,Vibration,36421,High,902
+2024-01-05,Hero Splendor,Noise,43051,High,1141
+2024-01-06,TVS Apache,Vibration,40909,Medium,1427
+2024-01-06,TVS Apache,Reduced Braking,35964,Medium,578
+2024-01-06,Hero Splendor,Wear-out,20693,Low,1420
+2024-01-07,Hero Splendor,Vibration,19443,High,1268
+2024-01-07,Honda Shine,Noise,43036,Medium,1427
+2024-01-07,Bajaj Pulsar,Vibration,4411,High,1423
+2024-01-08,Honda Shine,Wear-out,10429,Low,247
+2024-01-08,Honda Shine,Reduced Braking,7533,Low,607
+2024-01-08,Bajaj Pulsar,Vibration,47689,High,977
+2024-01-08,Honda Shine,Wear-out,23585,Low,945
+2024-01-09,Bajaj Pulsar,Overheating,27185,Low,930
+2024-01-09,Hero Splendor,Noise,23909,High,356
+2024-01-09,Honda Shine,Reduced Braking,21358,Medium,1314
+2024-01-09,Bajaj Pulsar,Noise,20992,Medium,902
+2024-01-09,Honda Shine,Wear-out,36089,High,866
+2024-01-09,TVS Apache,Vibration,8925,Medium,971
+2024-01-10,Hero Splendor,Noise,8475,Low,795
+2024-01-10,Bajaj Pulsar,Noise,42573,Low,1161
+2024-01-10,Bajaj Pulsar,Reduced Braking,21074,Low,756
+2024-01-10,Bajaj Pulsar,Vibration,41945,Low,444
+2024-01-11,Hero Splendor,Vibration,43576,Low,417
+2024-01-11,Hero Splendor,Overheating,49699,High,518
+2024-01-11,Bajaj Pulsar,Noise,36750,Medium,1125
+2024-01-11,Hero Splendor,Overheating,49630,Low,344
+2024-01-11,Honda Shine,Overheating,31337,High,1380
+2024-01-11,TVS Apache,Wear-out,23496,Low,1072
+2024-01-11,Hero Splendor,Wear-out,37528,High,268
+2024-01-11,Honda Shine,Noise,31770,Low,1024
+2024-01-12,Honda Shine,Vibration,28431,Low,689
+2024-01-12,Bajaj Pulsar,Reduced Braking,25501,High,256
+2024-01-12,Honda Shine,Noise,29988,Medium,270
+2024-01-12,TVS Apache,Wear-out,16141,High,624
+2024-01-12,Bajaj Pulsar,Reduced Braking,39742,High,798
+2024-01-12,Hero Splendor,Vibration,12494,High,1479
+2024-01-12,Hero Splendor,Wear-out,11330,Medium,759
+2024-01-12,Honda Shine,Reduced Braking,48728,Medium,780
+2024-01-12,Bajaj Pulsar,Reduced Braking,24703,Medium,431
+2024-01-12,TVS Apache,Noise,42635,Low,317
+2024-01-13,Hero Splendor,Wear-out,25682,Low,1097
+2024-01-13,Honda Shine,Reduced Braking,16349,Medium,1233
+2024-01-13,Bajaj Pulsar,Vibration,14813,Medium,1031
+2024-01-13,TVS Apache,Reduced Braking,3968,Medium,1004
+2024-01-13,TVS Apache,Noise,42317,Medium,1196
+2024-01-13,Hero Splendor,Wear-out,10174,Low,1489
+2024-01-14,Bajaj Pulsar,Reduced Braking,47964,High,1152
+2024-01-14,Bajaj Pulsar,Noise,7196,Low,1340
+2024-01-14,Honda Shine,Vibration,8582,Medium,1330
+2024-01-14,Hero Splendor,Noise,44237,Medium,546
+2024-01-15,Hero Splendor,Reduced Braking,5030,Low,292
+2024-01-15,TVS Apache,Reduced Braking,26385,Low,748
+2024-01-15,TVS Apache,Wear-out,38071,Low,242
+2024-01-15,Bajaj Pulsar,Vibration,14709,Low,1332
+2024-01-15,Bajaj Pulsar,Noise,43881,Medium,302
+2024-01-15,Hero Splendor,Reduced Braking,26359,Low,1194
+2024-01-16,TVS Apache,Vibration,38600,High,1070
+2024-01-16,Bajaj Pulsar,Noise,16273,High,1037
+2024-01-16,Bajaj Pulsar,Noise,46790,Low,1258
+2024-01-16,TVS Apache,Vibration,1907,Low,1124
+2024-01-17,Hero Splendor,Overheating,4658,Medium,1200
+2024-01-17,TVS Apache,Noise,18282,Medium,606
+2024-01-17,Bajaj Pulsar,Wear-out,39831,Low,1191
+2024-01-17,Honda Shine,Reduced Braking,2885,Medium,445
+2024-01-18,TVS Apache,Vibration,49657,Medium,876
+2024-01-18,TVS Apache,Vibration,43841,High,435
+2024-01-18,Hero Splendor,Vibration,48567,High,530
+2024-01-18,Hero Splendor,Vibration,6456,Low,1042
+2024-01-18,TVS Apache,Vibration,19618,Low,754
+2024-01-18,TVS Apache,Noise,2962,High,831
+2024-01-19,TVS Apache,Reduced Braking,22126,Medium,1381
+2024-01-19,Bajaj Pulsar,Noise,6836,High,249
+2024-01-19,Bajaj Pulsar,Overheating,14860,Low,579
+2024-01-19,Hero Splendor,Wear-out,6615,Medium,695
+2024-01-20,Honda Shine,Overheating,35292,Low,787
+2024-01-20,Hero Splendor,Wear-out,26344,Medium,640
+2024-01-20,TVS Apache,Wear-out,34892,Low,493
+2024-01-20,Honda Shine,Overheating,8404,High,854
+2024-01-20,Honda Shine,Overheating,16718,High,1263
+2024-01-20,Honda Shine,Vibration,33935,High,1254
+2024-01-20,TVS Apache,Wear-out,34421,Low,704
+2024-01-20,Bajaj Pulsar,Reduced Braking,44231,High,1255
+2024-01-20,Hero Splendor,Vibration,27963,Low,1411
+2024-01-20,Hero Splendor,Reduced Braking,13007,Medium,916
+2024-01-21,Honda Shine,Reduced Braking,11206,Medium,847
+2024-01-21,TVS Apache,Wear-out,35823,Low,475
+2024-01-21,Hero Splendor,Noise,47240,Medium,1045
+2024-01-21,Honda Shine,Overheating,11206,Low,1211
+2024-01-21,Bajaj Pulsar,Noise,26192,Low,392
+2024-01-21,Honda Shine,Overheating,17347,Low,500
+2024-01-21,Bajaj Pulsar,Vibration,15625,High,560
+2024-01-21,Hero Splendor,Wear-out,5196,High,515
+2024-01-21,Honda Shine,Wear-out,28051,Low,1105
+2024-01-22,Honda Shine,Vibration,1069,Medium,1160
+2024-01-22,Bajaj Pulsar,Vibration,29583,Low,1045
+2024-01-22,Bajaj Pulsar,Noise,35521,Low,430
+2024-01-22,Honda Shine,Noise,46924,Low,1401
+2024-01-22,Honda Shine,Overheating,47214,Low,523
+2024-01-22,Hero Splendor,Overheating,11983,Medium,587
+2024-01-22,Hero Splendor,Reduced Braking,1259,Medium,802
+2024-01-22,Bajaj Pulsar,Vibration,2578,High,1395
+2024-01-23,Hero Splendor,Reduced Braking,15493,High,1008
+2024-01-23,Hero Splendor,Overheating,42301,Low,1269
+2024-01-23,Honda Shine,Vibration,41245,High,217
+2024-01-23,Bajaj Pulsar,Noise,33146,Low,353
+2024-01-23,Hero Splendor,Vibration,17493,High,1122
+2024-01-23,Bajaj Pulsar,Noise,8975,High,1341
+2024-01-23,TVS Apache,Noise,12938,High,254
+2024-01-24,Bajaj Pulsar,Overheating,28215,Low,1390
+2024-01-24,Hero Splendor,Vibration,49445,Low,932
+2024-01-24,Hero Splendor,Reduced Braking,15303,Low,1210
+2024-01-24,Honda Shine,Reduced Braking,19135,High,246
+2024-01-24,TVS Apache,Wear-out,21582,High,1219
+2024-01-24,TVS Apache,Wear-out,8392,Low,854
+2024-01-24,Honda Shine,Noise,45182,Medium,1304
+2024-01-24,Honda Shine,Overheating,11553,High,686
+2024-01-24,TVS Apache,Wear-out,14224,Low,1271
+2024-01-24,Honda Shine,Reduced Braking,41706,Low,1471
+2024-01-25,Hero Splendor,Overheating,38436,Medium,394
+2024-01-25,Honda Shine,Noise,41195,Medium,674
+2024-01-25,TVS Apache,Reduced Braking,9854,Medium,1407
+2024-01-25,Bajaj Pulsar,Noise,49668,Low,939
+2024-01-25,Bajaj Pulsar,Vibration,18557,High,1438
+2024-01-25,Hero Splendor,Vibration,2602,High,1407
+2024-01-25,Honda Shine,Overheating,44557,Medium,960
+2024-01-26,Honda Shine,Reduced Braking,10238,High,1042
+2024-01-26,Hero Splendor,Reduced Braking,17408,Low,569
+2024-01-26,Honda Shine,Reduced Braking,40067,Medium,1014
+2024-01-26,Honda Shine,Noise,49978,Low,485
+2024-01-26,Honda Shine,Vibration,1486,Low,361
+2024-01-26,TVS Apache,Wear-out,27617,Medium,705
+2024-01-26,Honda Shine,Reduced Braking,49546,Medium,1115
+2024-01-27,TVS Apache,Reduced Braking,3756,High,641
+2024-01-27,Hero Splendor,Overheating,17956,Low,485
+2024-01-27,Bajaj Pulsar,Overheating,44267,Medium,796
+2024-01-27,Honda Shine,Overheating,17962,High,316
+2024-01-28,Bajaj Pulsar,Reduced Braking,34975,High,1080
+2024-01-28,Honda Shine,Overheating,33160,Medium,850
+2024-01-28,Hero Splendor,Wear-out,36833,Medium,1153
+2024-01-28,Hero Splendor,Reduced Braking,37421,Low,218
+2024-01-28,TVS Apache,Noise,19175,Low,1157
+2024-01-28,Bajaj Pulsar,Overheating,17842,Low,1161
+2024-01-28,Honda Shine,Wear-out,30336,High,1075
+2024-01-29,TVS Apache,Reduced Braking,26529,High,775
+2024-01-29,Honda Shine,Noise,29876,Medium,1363
+2024-01-29,TVS Apache,Wear-out,15748,Medium,1152
+2024-01-29,Hero Splendor,Noise,26670,High,531
+2024-01-29,Honda Shine,Reduced Braking,4425,High,820
+2024-01-30,TVS Apache,Reduced Braking,5187,Medium,949
+2024-01-30,Bajaj Pulsar,Wear-out,7314,Low,716
+2024-01-30,Hero Splendor,Noise,31658,Low,815
+2024-01-30,TVS Apache,Vibration,7918,Low,999
+2024-01-30,Honda Shine,Wear-out,47154,Low,1394
+2024-01-30,Bajaj Pulsar,Wear-out,48913,High,347
+2024-01-31,TVS Apache,Overheating,3201,High,835
+2024-01-31,TVS Apache,Reduced Braking,26477,Low,793
+2024-01-31,Honda Shine,Noise,10024,Low,1022
+2024-01-31,TVS Apache,Reduced Braking,44917,Low,627
+2024-01-31,Bajaj Pulsar,Vibration,15583,Low,917
+2024-02-01,TVS Apache,Vibration,38525,Low,906
+2024-02-01,TVS Apache,Noise,18665,Low,863
+2024-02-01,Honda Shine,Noise,38082,Medium,275
+2024-02-01,Bajaj Pulsar,Noise,48855,Low,254
+2024-02-01,Honda Shine,Overheating,34503,Medium,743
+2024-02-01,Honda Shine,Vibration,2431,Low,254
+2024-02-01,TVS Apache,Vibration,44873,Low,1003
+2024-02-01,Bajaj Pulsar,Vibration,46565,Low,1465
+2024-02-01,Hero Splendor,Reduced Braking,22808,Low,331
+2024-02-01,Hero Splendor,Overheating,22733,High,1066
+2024-02-02,TVS Apache,Noise,7783,Low,879
+2024-02-02,TVS Apache,Vibration,34013,Medium,1279
+2024-02-02,Honda Shine,Noise,38767,Medium,603
+2024-02-03,Hero Splendor,Noise,15667,High,259
+2024-02-03,Hero Splendor,Vibration,32554,Low,938
+2024-02-03,Honda Shine,Overheating,27207,Low,723
+2024-02-03,Hero Splendor,Overheating,35374,Medium,322
+2024-02-03,Honda Shine,Noise,17818,Low,512
+2024-02-03,Honda Shine,Reduced Braking,3822,High,1304
+2024-02-03,TVS Apache,Vibration,17493,High,447
+2024-02-04,Honda Shine,Reduced Braking,20700,Medium,609
+2024-02-04,Honda Shine,Overheating,17233,Medium,1090
+2024-02-04,Honda Shine,Reduced Braking,37865,High,1358
+2024-02-04,TVS Apache,Reduced Braking,15846,High,825
+2024-02-04,Honda Shine,Overheating,9894,Medium,1230
+2024-02-04,Honda Shine,Overheating,29081,Medium,367
+2024-02-04,Honda Shine,Vibration,3238,Low,1048
+2024-02-04,Hero Splendor,Wear-out,41329,High,1391
+2024-02-05,TVS Apache,Overheating,25843,High,282
+2024-02-05,Hero Splendor,Overheating,20297,High,455
+2024-02-05,TVS Apache,Vibration,15133,High,1073
+2024-02-05,Honda Shine,Noise,23111,Medium,1086
+2024-02-05,Honda Shine,Noise,7597,High,459
+2024-02-05,TVS Apache,Overheating,39996,Low,1189
+2024-02-06,Bajaj Pulsar,Wear-out,42380,Medium,751
+2024-02-06,TVS Apache,Wear-out,38365,High,1362
+2024-02-06,Honda Shine,Reduced Braking,19472,Low,557
+2024-02-06,Bajaj Pulsar,Overheating,41578,Medium,1373
+2024-02-06,Bajaj Pulsar,Vibration,36001,Low,1151
+2024-02-06,Hero Splendor,Noise,26943,High,833
+2024-02-06,Hero Splendor,Noise,6812,Medium,788
+2024-02-06,Hero Splendor,Overheating,27911,Medium,763
+2024-02-06,Bajaj Pulsar,Overheating,46995,Low,601
+2024-02-07,Honda Shine,Reduced Braking,38686,Medium,775
+2024-02-07,Honda Shine,Vibration,25960,Medium,539
+2024-02-07,TVS Apache,Noise,35326,Medium,291
+2024-02-07,Honda Shine,Overheating,43512,Low,891
+2024-02-07,TVS Apache,Noise,19486,Low,1233
+2024-02-07,TVS Apache,Vibration,36863,High,769
+2024-02-07,Bajaj Pulsar,Noise,14965,High,685
+2024-02-07,Bajaj Pulsar,Wear-out,28473,Medium,1104
+2024-02-07,TVS Apache,Wear-out,10586,High,827
+2024-02-08,TVS Apache,Noise,29361,High,655
+2024-02-08,TVS Apache,Reduced Braking,42651,Low,997
+2024-02-08,Honda Shine,Overheating,17674,Low,1357
+2024-02-08,Hero Splendor,Noise,11569,High,489
+2024-02-08,Honda Shine,Vibration,44562,Medium,726
+2024-02-08,Bajaj Pulsar,Wear-out,36412,Low,350
+2024-02-09,Hero Splendor,Noise,8684,Medium,1471
+2024-02-09,Hero Splendor,Reduced Braking,27286,High,786
+2024-02-09,Honda Shine,Wear-out,38822,High,1018
+2024-02-10,Honda Shine,Reduced Braking,30841,Low,315
+2024-02-10,Bajaj Pulsar,Vibration,30007,High,712
+2024-02-10,Honda Shine,Noise,33435,Medium,1138
+2024-02-10,Bajaj Pulsar,Vibration,16587,Medium,846
+2024-02-10,Honda Shine,Vibration,6296,Medium,1191
+2024-02-10,Honda Shine,Noise,40802,High,534
+2024-02-10,Bajaj Pulsar,Wear-out,41202,Low,1256
+2024-02-10,Bajaj Pulsar,Noise,34492,High,1177
+2024-02-11,Honda Shine,Wear-out,20092,Medium,1248
+2024-02-11,Hero Splendor,Noise,17718,Low,207
+2024-02-11,Bajaj Pulsar,Noise,34948,High,671
+2024-02-11,Honda Shine,Vibration,49060,Medium,1043
+2024-02-11,TVS Apache,Noise,15220,Low,610
+2024-02-11,Hero Splendor,Vibration,46482,Medium,1477
+2024-02-11,Honda Shine,Vibration,44861,Low,202
+2024-02-11,Hero Splendor,Reduced Braking,32140,Medium,1413
+2024-02-11,Honda Shine,Reduced Braking,49147,Medium,835
+2024-02-11,TVS Apache,Reduced Braking,20559,Medium,523
+2024-02-12,Hero Splendor,Wear-out,9038,High,1026
+2024-02-12,Hero Splendor,Overheating,45569,Medium,1494
+2024-02-12,Honda Shine,Wear-out,47014,Medium,442
+2024-02-13,Honda Shine,Vibration,27062,Low,465
+2024-02-13,Hero Splendor,Noise,28392,Medium,1439
+2024-02-13,Bajaj Pulsar,Reduced Braking,39030,Medium,822
+2024-02-13,Bajaj Pulsar,Wear-out,2779,Low,418
+2024-02-13,Honda Shine,Vibration,33501,Low,1246
+2024-02-14,Hero Splendor,Reduced Braking,10409,High,753
+2024-02-14,Hero Splendor,Wear-out,47641,High,1315
+2024-02-14,Honda Shine,Overheating,4224,Medium,1230
+2024-02-14,Bajaj Pulsar,Wear-out,39865,Medium,641
+2024-02-14,Honda Shine,Wear-out,16142,High,1314
+2024-02-14,Hero Splendor,Vibration,44437,Medium,1260
+2024-02-15,Hero Splendor,Overheating,15594,Low,1116
+2024-02-15,TVS Apache,Overheating,36113,Low,1269
+2024-02-15,Honda Shine,Noise,23410,Medium,417
+2024-02-15,Hero Splendor,Wear-out,42573,Low,1192
+2024-02-15,TVS Apache,Noise,33486,High,805
+2024-02-15,Hero Splendor,Noise,8223,Low,254
+2024-02-15,Honda Shine,Vibration,36234,Low,1447
+2024-02-15,Hero Splendor,Reduced Braking,28369,Low,1043
+2024-02-15,TVS Apache,Vibration,10388,Medium,1101
+2024-02-15,TVS Apache,Wear-out,22003,High,513
+2024-02-16,Hero Splendor,Vibration,22325,Low,285
+2024-02-16,TVS Apache,Vibration,42186,Low,1003
+2024-02-16,TVS Apache,Reduced Braking,31450,Medium,215
+2024-02-17,TVS Apache,Wear-out,20495,Low,679
+2024-02-17,Honda Shine,Noise,41550,Low,834
+2024-02-17,Bajaj Pulsar,Reduced Braking,1996,High,1428
+2024-02-17,Honda Shine,Noise,33193,High,444
+2024-02-17,TVS Apache,Vibration,44060,Medium,1155
+2024-02-17,Bajaj Pulsar,Vibration,6427,Low,685
+2024-02-17,TVS Apache,Wear-out,27231,Low,1333
+2024-02-18,Honda Shine,Reduced Braking,10208,High,370
+2024-02-18,Honda Shine,Wear-out,42377,Medium,750
+2024-02-18,Bajaj Pulsar,Wear-out,33088,High,566
+2024-02-18,Honda Shine,Vibration,9191,Medium,1060
+2024-02-18,Hero Splendor,Wear-out,7123,Low,453
+2024-02-18,TVS Apache,Overheating,34985,Medium,1343
+2024-02-18,Honda Shine,Vibration,43592,Low,951
+2024-02-18,Hero Splendor,Overheating,10909,Low,283
+2024-02-18,Hero Splendor,Overheating,21084,High,1333
+2024-02-19,Bajaj Pulsar,Reduced Braking,39781,Low,435
+2024-02-19,Honda Shine,Overheating,27307,Low,1282
+2024-02-19,Honda Shine,Wear-out,9743,High,437
+2024-02-19,Hero Splendor,Wear-out,32184,Medium,1459
+2024-02-19,Honda Shine,Overheating,45605,Medium,1053
+2024-02-19,TVS Apache,Wear-out,8836,High,1044
+2024-02-19,Bajaj Pulsar,Reduced Braking,19163,High,506
+2024-02-19,Bajaj Pulsar,Reduced Braking,35142,Medium,1163
+2024-02-19,Honda Shine,Wear-out,25703,Low,777
+2024-02-19,Honda Shine,Wear-out,40865,Medium,1030
+2024-02-20,Bajaj Pulsar,Noise,22647,Low,1273
+2024-02-20,Bajaj Pulsar,Vibration,43257,Medium,1016
+2024-02-20,TVS Apache,Overheating,27681,High,572
+2024-02-20,TVS Apache,Wear-out,44586,High,689
+2024-02-21,TVS Apache,Noise,28010,High,1387
+2024-02-21,Bajaj Pulsar,Vibration,7153,High,1104
+2024-02-21,TVS Apache,Vibration,2201,Low,523
+2024-02-21,Honda Shine,Wear-out,9319,Medium,835
+2024-02-21,TVS Apache,Noise,3325,High,944
+2024-02-21,TVS Apache,Overheating,39742,High,880
+2024-02-21,TVS Apache,Noise,49785,High,249
+2024-02-21,TVS Apache,Wear-out,38955,Low,959
+2024-02-21,Bajaj Pulsar,Overheating,6006,High,1315
+2024-02-22,Honda Shine,Wear-out,48840,Medium,1371
+2024-02-22,Bajaj Pulsar,Noise,10008,High,505
+2024-02-22,Honda Shine,Noise,17793,Low,271
+2024-02-22,Hero Splendor,Vibration,6198,High,1052
+2024-02-23,TVS Apache,Wear-out,30863,High,543
+2024-02-23,Bajaj Pulsar,Vibration,34973,High,639
+2024-02-23,Hero Splendor,Reduced Braking,44228,Medium,244
+2024-02-23,TVS Apache,Vibration,34777,Low,1343
+2024-02-23,Honda Shine,Wear-out,16098,Medium,760
+2024-02-23,Bajaj Pulsar,Vibration,38637,Low,610
+2024-02-23,Hero Splendor,Vibration,48989,Medium,649
+2024-02-23,Hero Splendor,Overheating,6239,Medium,1146
+2024-02-24,Hero Splendor,Vibration,25769,Low,511
+2024-02-24,TVS Apache,Reduced Braking,44215,Low,1174
+2024-02-24,Hero Splendor,Overheating,49870,Medium,245
+2024-02-24,Hero Splendor,Reduced Braking,17375,Medium,309
+2024-02-24,Honda Shine,Vibration,29509,Medium,599
+2024-02-24,Bajaj Pulsar,Noise,32381,Medium,1054
+2024-02-25,TVS Apache,Vibration,26213,Low,1112
+2024-02-25,Hero Splendor,Noise,40325,Low,1412
+2024-02-25,TVS Apache,Vibration,3212,Low,937
+2024-02-25,Hero Splendor,Reduced Braking,29751,Medium,338
+2024-02-26,Bajaj Pulsar,Noise,8462,Medium,689
+2024-02-26,Hero Splendor,Noise,48583,Low,1498
+2024-02-26,Honda Shine,Noise,19880,Medium,1413
+2024-02-26,Bajaj Pulsar,Noise,7319,High,893
+2024-02-26,Honda Shine,Overheating,3118,Low,963
+2024-02-26,TVS Apache,Overheating,32957,Low,1293
+2024-02-26,Bajaj Pulsar,Noise,19897,Low,938
+2024-02-26,Honda Shine,Overheating,4946,Medium,1099
+2024-02-27,Hero Splendor,Wear-out,47512,Low,1163
+2024-02-27,Bajaj Pulsar,Noise,46551,Low,739
+2024-02-27,Bajaj Pulsar,Vibration,6571,Low,1231
+2024-02-27,Honda Shine,Overheating,43753,High,758
+2024-02-27,Bajaj Pulsar,Reduced Braking,14354,Medium,554
+2024-02-27,Honda Shine,Noise,3799,High,780
+2024-02-27,Bajaj Pulsar,Noise,27968,High,956
+2024-02-28,Honda Shine,Vibration,47699,Low,263
+2024-02-28,TVS Apache,Overheating,26428,Low,866
+2024-02-28,TVS Apache,Overheating,6469,High,804
+2024-02-28,Hero Splendor,Noise,34244,Low,453
+2024-02-29,TVS Apache,Reduced Braking,5556,High,302
+2024-02-29,Hero Splendor,Reduced Braking,8262,Medium,971
+2024-02-29,Bajaj Pulsar,Noise,36847,High,1227
+2024-02-29,TVS Apache,Reduced Braking,4428,Medium,1244
+2024-02-29,Bajaj Pulsar,Vibration,22765,Medium,1197
+2024-02-29,Hero Splendor,Wear-out,15665,Low,875
+2024-02-29,Hero Splendor,Wear-out,47304,Low,891
+2024-02-29,Bajaj Pulsar,Reduced Braking,26457,Low,1218
+2024-02-29,Bajaj Pulsar,Reduced Braking,45350,Medium,632
+2024-02-29,Hero Splendor,Wear-out,25849,Medium,1450
+2024-03-01,Honda Shine,Overheating,29088,Medium,206
+2024-03-01,TVS Apache,Vibration,25518,Medium,471
+2024-03-01,Hero Splendor,Wear-out,17082,Medium,408
+2024-03-01,TVS Apache,Reduced Braking,29535,Medium,1245
+2024-03-01,TVS Apache,Wear-out,37907,Low,1165
+2024-03-01,Bajaj Pulsar,Wear-out,17238,Medium,1210
+2024-03-02,Hero Splendor,Wear-out,29451,Low,1312
+2024-03-02,TVS Apache,Overheating,22946,Low,1227
+2024-03-02,TVS Apache,Vibration,18001,Low,734
+2024-03-03,Bajaj Pulsar,Overheating,38563,High,732
+2024-03-03,Honda Shine,Reduced Braking,26153,Low,1345
+2024-03-03,Hero Splendor,Overheating,46550,Medium,1028
+2024-03-03,Hero Splendor,Wear-out,6016,Low,965
+2024-03-03,Bajaj Pulsar,Noise,30150,Low,321
+2024-03-03,Hero Splendor,Noise,13107,Low,1434
+2024-03-03,TVS Apache,Reduced Braking,29804,Medium,798
+2024-03-03,Bajaj Pulsar,Noise,6639,Medium,1054
+2024-03-04,Hero Splendor,Overheating,32317,Low,1356
+2024-03-04,TVS Apache,Vibration,14757,Low,1426
+2024-03-04,Hero Splendor,Overheating,36335,Medium,506
+2024-03-04,Honda Shine,Wear-out,27805,High,1243
+2024-03-04,Honda Shine,Wear-out,20387,Medium,443
+2024-03-04,TVS Apache,Vibration,2839,Low,1127
+2024-03-04,Bajaj Pulsar,Noise,19170,Medium,549
+2024-03-04,Bajaj Pulsar,Overheating,20332,Low,1471
+2024-03-04,Hero Splendor,Overheating,26859,Medium,644
+2024-03-04,Bajaj Pulsar,Vibration,49775,High,716
+2024-03-05,TVS Apache,Wear-out,16473,Low,1012
+2024-03-05,Honda Shine,Noise,37152,Medium,224
+2024-03-05,Bajaj Pulsar,Reduced Braking,49987,Low,953
+2024-03-05,TVS Apache,Overheating,13247,High,1475
+2024-03-05,Bajaj Pulsar,Wear-out,44761,Low,1298
+2024-03-05,Honda Shine,Reduced Braking,42346,High,819
+2024-03-05,Hero Splendor,Reduced Braking,3051,Medium,605
+2024-03-05,TVS Apache,Reduced Braking,40716,High,1461
+2024-03-05,Honda Shine,Reduced Braking,2330,Low,1294
+2024-03-06,TVS Apache,Overheating,35556,Low,892
+2024-03-06,Bajaj Pulsar,Overheating,34578,Medium,1385
+2024-03-06,Bajaj Pulsar,Reduced Braking,33867,Low,361
+2024-03-06,Honda Shine,Overheating,10372,Low,1087
+2024-03-07,Honda Shine,Noise,39435,Low,359
+2024-03-07,TVS Apache,Vibration,43205,Medium,1370
+2024-03-07,Hero Splendor,Overheating,48831,Low,990
+2024-03-07,Bajaj Pulsar,Overheating,39870,Low,237
+2024-03-08,Hero Splendor,Vibration,25770,Low,500
+2024-03-08,TVS Apache,Overheating,49082,Medium,655
+2024-03-08,Hero Splendor,Vibration,26751,Medium,985
+2024-03-08,TVS Apache,Reduced Braking,19365,Medium,874
+2024-03-08,Hero Splendor,Overheating,26457,High,686
+2024-03-08,Hero Splendor,Vibration,44056,Low,696
+2024-03-08,Hero Splendor,Noise,7975,High,490
+2024-03-08,Hero Splendor,Wear-out,7901,High,580
+2024-03-08,TVS Apache,Wear-out,17727,Medium,487
+2024-03-09,Bajaj Pulsar,Overheating,32476,High,1322
+2024-03-09,TVS Apache,Reduced Braking,48215,High,838
+2024-03-09,Bajaj Pulsar,Overheating,20800,Medium,421
+2024-03-09,Bajaj Pulsar,Vibration,10879,Medium,1467
+2024-03-09,Hero Splendor,Reduced Braking,17208,Medium,1067
+2024-03-09,Honda Shine,Reduced Braking,48179,Low,1292
+2024-03-10,Bajaj Pulsar,Overheating,49985,Medium,253
+2024-03-10,Bajaj Pulsar,Reduced Braking,43330,Low,1006
+2024-03-10,Honda Shine,Vibration,44996,High,946
+2024-03-10,TVS Apache,Overheating,44320,Medium,1066
+2024-03-10,Hero Splendor,Vibration,42050,Low,268
+2024-03-10,Hero Splendor,Wear-out,24381,Low,231
+2024-03-10,TVS Apache,Reduced Braking,21214,Medium,997
+2024-03-10,Hero Splendor,Reduced Braking,32841,Medium,995
+2024-03-11,Bajaj Pulsar,Wear-out,38901,Medium,1036
+2024-03-11,Bajaj Pulsar,Reduced Braking,29657,Low,1350
+2024-03-11,Bajaj Pulsar,Vibration,3217,Medium,1312
+2024-03-11,Bajaj Pulsar,Reduced Braking,36986,Low,1031
+2024-03-11,TVS Apache,Vibration,9946,Low,1171
+2024-03-11,Hero Splendor,Overheating,16934,Low,1043
+2024-03-11,Honda Shine,Vibration,25628,Low,342
+2024-03-11,Hero Splendor,Noise,17096,Low,325
+2024-03-11,Hero Splendor,Wear-out,42568,Medium,785
+2024-03-11,Bajaj Pulsar,Overheating,7409,High,915
+2024-03-12,Honda Shine,Overheating,33925,Medium,1124
+2024-03-12,Hero Splendor,Reduced Braking,2303,Low,247
+2024-03-12,Honda Shine,Vibration,43858,Low,514
+2024-03-12,TVS Apache,Vibration,23986,High,908
+2024-03-12,TVS Apache,Wear-out,1461,Medium,446
+2024-03-12,Bajaj Pulsar,Reduced Braking,23926,Low,1233
+2024-03-12,Bajaj Pulsar,Overheating,46888,High,1338
+2024-03-13,Bajaj Pulsar,Reduced Braking,4363,High,932
+2024-03-13,Hero Splendor,Reduced Braking,28187,Medium,1082
+2024-03-13,Hero Splendor,Noise,25826,Low,1307
+2024-03-14,Bajaj Pulsar,Vibration,21852,High,583
+2024-03-14,Hero Splendor,Noise,18583,High,914
+2024-03-14,Hero Splendor,Noise,39509,Medium,781
+2024-03-14,Bajaj Pulsar,Overheating,1782,High,1082
+2024-03-14,Hero Splendor,Reduced Braking,23249,Medium,1011
+2024-03-14,Hero Splendor,Vibration,26300,High,552
+2024-03-14,Bajaj Pulsar,Overheating,27994,Medium,755
+2024-03-15,Honda Shine,Overheating,5313,Medium,605
+2024-03-15,Honda Shine,Reduced Braking,49992,High,1015
+2024-03-15,TVS Apache,Wear-out,2088,Medium,703
+2024-03-15,TVS Apache,Reduced Braking,29387,Medium,776
+2024-03-15,TVS Apache,Overheating,34055,High,1214
+2024-03-15,Bajaj Pulsar,Reduced Braking,47097,High,1251
+2024-03-15,Bajaj Pulsar,Overheating,45293,Medium,524
+2024-03-15,Honda Shine,Overheating,15316,High,973
+2024-03-15,TVS Apache,Reduced Braking,33583,High,390
+2024-03-16,Hero Splendor,Noise,7372,Low,1466
+2024-03-16,Hero Splendor,Noise,27521,High,436
+2024-03-16,Bajaj Pulsar,Noise,5188,Low,1391
+2024-03-17,TVS Apache,Noise,23760,High,1322
+2024-03-17,Honda Shine,Reduced Braking,46316,Low,360
+2024-03-17,Bajaj Pulsar,Noise,25316,High,848
+2024-03-17,TVS Apache,Noise,23413,High,307
+2024-03-17,Hero Splendor,Reduced Braking,21567,Medium,268
+2024-03-17,Bajaj Pulsar,Noise,15145,High,1481
+2024-03-17,Hero Splendor,Reduced Braking,36732,Medium,1217
+2024-03-17,Bajaj Pulsar,Noise,35085,High,512
+2024-03-17,TVS Apache,Wear-out,15360,Low,817
+2024-03-18,TVS Apache,Vibration,14661,Low,676
+2024-03-18,Hero Splendor,Vibration,24360,Medium,1150
+2024-03-18,TVS Apache,Noise,32336,High,655
+2024-03-18,TVS Apache,Wear-out,10816,Low,334
+2024-03-18,Honda Shine,Noise,18585,High,316
+2024-03-18,Honda Shine,Wear-out,30725,Medium,1053
+2024-03-18,Honda Shine,Reduced Braking,27597,Medium,890
+2024-03-19,Honda Shine,Wear-out,9431,High,1321
+2024-03-19,Bajaj Pulsar,Wear-out,25386,Low,868
+2024-03-19,Bajaj Pulsar,Wear-out,17668,Low,1488
+2024-03-19,Honda Shine,Overheating,12050,Low,502
+2024-03-19,Bajaj Pulsar,Overheating,28246,Medium,1186
+2024-03-19,Hero Splendor,Wear-out,40689,High,962
+2024-03-19,Honda Shine,Noise,43544,Medium,966
+2024-03-19,TVS Apache,Reduced Braking,3192,Low,1220
+2024-03-19,Honda Shine,Vibration,9672,Medium,724
+2024-03-20,TVS Apache,Noise,21570,Medium,1190
+2024-03-20,Hero Splendor,Overheating,29364,Low,216
+2024-03-20,Honda Shine,Noise,49856,Low,1397
+2024-03-20,Hero Splendor,Noise,28119,Medium,265
+2024-03-20,Bajaj Pulsar,Wear-out,41055,High,322
+2024-03-21,Hero Splendor,Reduced Braking,38419,High,699
+2024-03-21,Honda Shine,Reduced Braking,2466,Low,918
+2024-03-21,Bajaj Pulsar,Wear-out,38503,Low,623
+2024-03-22,Bajaj Pulsar,Vibration,27928,Low,1095
+2024-03-22,Honda Shine,Noise,2490,Medium,1415
+2024-03-22,Hero Splendor,Vibration,8664,High,727
+2024-03-22,Bajaj Pulsar,Noise,17842,Low,1128
+2024-03-22,Bajaj Pulsar,Wear-out,26152,Medium,257
+2024-03-22,Bajaj Pulsar,Vibration,47387,Low,1291
+2024-03-23,TVS Apache,Noise,21152,High,694
+2024-03-23,TVS Apache,Reduced Braking,45372,Medium,234
+2024-03-23,Honda Shine,Reduced Braking,49837,Medium,1152
+2024-03-23,Bajaj Pulsar,Reduced Braking,47639,High,712
+2024-03-23,Hero Splendor,Reduced Braking,10083,High,1352
+2024-03-23,Bajaj Pulsar,Wear-out,23780,Medium,1431
+2024-03-24,Hero Splendor,Overheating,22199,High,1216
+2024-03-24,Hero Splendor,Noise,26317,Low,249
+2024-03-24,Honda Shine,Reduced Braking,32594,Low,1425
+2024-03-24,TVS Apache,Noise,23042,High,817
+2024-03-24,Honda Shine,Vibration,32634,High,848
+2024-03-24,Hero Splendor,Overheating,16505,High,318
+2024-03-24,TVS Apache,Vibration,29677,High,1500
+2024-03-24,Hero Splendor,Overheating,17307,High,701
+2024-03-25,Honda Shine,Vibration,21925,High,546
+2024-03-25,Bajaj Pulsar,Overheating,49253,Low,1308
+2024-03-25,Bajaj Pulsar,Reduced Braking,23623,Low,1056
+2024-03-25,Honda Shine,Vibration,38215,Medium,704
+2024-03-25,TVS Apache,Noise,35882,High,533
+2024-03-25,Honda Shine,Overheating,1884,Medium,787
+2024-03-25,Honda Shine,Reduced Braking,6092,Low,475
+2024-03-25,Honda Shine,Vibration,48470,High,1084
+2024-03-26,Bajaj Pulsar,Reduced Braking,2353,Medium,1446
+2024-03-26,TVS Apache,Vibration,30027,Medium,1288
+2024-03-26,Hero Splendor,Overheating,40999,Medium,236
+2024-03-26,Hero Splendor,Wear-out,38712,Low,299
+2024-03-26,Hero Splendor,Reduced Braking,9053,Low,906
+2024-03-26,TVS Apache,Noise,33335,High,1416
+2024-03-26,Hero Splendor,Vibration,26555,Low,1354
+2024-03-26,Honda Shine,Reduced Braking,25489,High,614
+2024-03-26,Honda Shine,Noise,41544,Low,294
+2024-03-27,Bajaj Pulsar,Vibration,33596,High,629
+2024-03-27,Hero Splendor,Overheating,20403,Medium,1303
+2024-03-27,TVS Apache,Overheating,9735,High,1048
+2024-03-27,TVS Apache,Reduced Braking,34958,Medium,274
+2024-03-27,Honda Shine,Wear-out,32960,Medium,621
+2024-03-27,Honda Shine,Wear-out,44506,Low,1240
+2024-03-27,Honda Shine,Noise,20120,Medium,431
+2024-03-27,Bajaj Pulsar,Vibration,49879,High,1395
+2024-03-27,Hero Splendor,Reduced Braking,37991,Medium,395
+2024-03-28,TVS Apache,Vibration,24203,High,905
+2024-03-28,Bajaj Pulsar,Overheating,10009,Medium,696
+2024-03-28,TVS Apache,Vibration,5723,High,834
+2024-03-28,TVS Apache,Wear-out,3227,Low,978
+2024-03-28,Bajaj Pulsar,Overheating,13866,Medium,514
+2024-03-28,TVS Apache,Reduced Braking,37721,Low,986
+2024-03-29,Honda Shine,Noise,25095,Medium,720
+2024-03-29,Bajaj Pulsar,Overheating,20555,Medium,722
+2024-03-29,Bajaj Pulsar,Overheating,47367,Medium,1422
+2024-03-30,Bajaj Pulsar,Wear-out,19177,Medium,1070
+2024-03-30,Bajaj Pulsar,Reduced Braking,34784,High,1368
+2024-03-30,Honda Shine,Wear-out,40335,Medium,729
+2024-03-30,Bajaj Pulsar,Vibration,33145,Medium,471
+2024-03-30,Bajaj Pulsar,Reduced Braking,41370,Low,437
+2024-03-30,TVS Apache,Noise,10484,Medium,1073
+2024-03-30,Bajaj Pulsar,Overheating,41048,Low,551
+2024-03-30,TVS Apache,Wear-out,18681,Medium,582
+2024-03-30,Honda Shine,Vibration,48896,Medium,1274

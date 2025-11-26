@@ -1,0 +1,11 @@
+1. data_cleaning.py (Purpose)
+A separate Python file that contains helper functions like:
+Remove empty rows
+Convert strings to numbers
+Standardize date formats
+Handle missing values
+Remove duplicates
+This ensures all data in Firestore is clean + ready for AI + dashboard.
+
+Why do we need it?
+Frontend analytics + ML cannot work on messy CSV values.
