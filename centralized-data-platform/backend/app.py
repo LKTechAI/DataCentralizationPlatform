@@ -11,8 +11,6 @@ from oop_demo.routes import oop_bp
 import os
 
 
-
-
 app = Flask(__name__)
 CORS(app)
 app.register_blueprint(oop_bp, url_prefix="/oop_demo")
