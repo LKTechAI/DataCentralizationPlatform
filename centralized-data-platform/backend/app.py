@@ -8,11 +8,13 @@ from utils.analysis import summarize
 import pandas as pd
 import numpy as np
 from datetime import datetime
+from oop_demo.routes import oop_bp
 
 
 
 app = Flask(__name__)
 CORS(app)
+app.register_blueprint(oop_bp, url_prefix="/oop_demo")
 
 # --- FIREBASE INITIALIZATION ---
 cred = credentials.Certificate("firebase_config.json")

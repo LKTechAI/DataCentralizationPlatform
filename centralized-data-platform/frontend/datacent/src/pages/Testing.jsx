@@ -1,222 +1,220 @@
 import React, { useEffect, useState } from "react";
 import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
   PieChart,
   Pie,
   Cell,
   Tooltip,
-  Legend,
-  LineChart,
-  Line,
-  AreaChart,
-  Area,
-  CartesianGrid,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
   ResponsiveContainer,
+  CartesianGrid,
 } from "recharts";
 
-const COLORS = ["#93C5FD", "#A5B4FC", "#FDE68A", "#86EFAC", "#FCA5A5"];
+const COLORS = ["#90CAF9", "#F48FB1"]; // pastel better colors
 
-export default function Testing() {
-  const [testData, setTestData] = useState([]);
+function Testing() {
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch("http://127.0.0.1:5000/testing")
       .then((res) => res.json())
-      .then((data) => setTestData(data))
-      .catch((err) => console.error("Error loading testing data", err));
+      .then((d) => {
+        // Convert values to numeric safely
+        const cleaned = d.map((x) => ({
+          ...x,
+          Hardness: Number(x.Hardness) || 0,
+          Thickness_mm: Number(x.Thickness_mm) || 0,
+          Friction_Coefficient: Number(x.Friction_Coefficient) || 0,
+        }));
+        setData(cleaned);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
-  if (testData.length === 0) {
-    return <p className="text-center mt-10 text-xl">Loading Testing Data...</p>;
-  }
+  if (!data || data.length === 0)
+    return <div style={{ padding: "40px" }}>Loading...</div>;
 
-  // ------------------ PROCESSING ------------------
+  // ----- CALCULATIONS -----
+  const avgHardness = (
+    data.reduce((a, b) => a + b.Hardness, 0) / data.length
+  ).toFixed(2);
 
-  const passFailCount = {};
-  testData.forEach((d) => {
-    passFailCount[d.Test_Result] = (passFailCount[d.Test_Result] || 0) + 1;
-  });
-  const passFailData = Object.entries(passFailCount).map(([name, value]) => ({
-    name,
-    value,
-  }));
+  const avgThickness = (
+    data.reduce((a, b) => a + b.Thickness_mm, 0) / data.length
+  ).toFixed(2);
 
-  const hardnessData = testData.map((d) => ({
-    batch: d.Batch_ID,
-    hardness: Number(d.Hardness),
-  }));
+  const avgFriction = (
+    data.reduce((a, b) => a + b.Friction_Coefficient, 0) / data.length
+  ).toFixed(3);
 
-  const thicknessData = testData.map((d) => ({
-    batch: d.Batch_ID,
-    thickness: Number(d.Thickness_mm),
-  }));
+  const passCount = data.filter((x) => x.Test_Result === "PASS").length;
+  const failCount = data.length - passCount;
 
-  const frictionData = testData.map((d) => ({
-    batch: d.Batch_ID,
-    friction: Number(d.Friction_Coefficient),
-  }));
+  const passRate = ((passCount / data.length) * 100).toFixed(1);
 
-  const avgHardness =
-    (testData.reduce((sum, d) => sum + Number(d.Hardness), 0) /
-      testData.length).toFixed(2);
-
-  const avgThickness =
-    (testData.reduce((sum, d) => sum + Number(d.Thickness_mm), 0) /
-      testData.length).toFixed(2);
-
-  const avgFriction =
-    (testData.reduce((sum, d) => sum + Number(d.Friction_Coefficient), 0) /
-      testData.length).toFixed(3);
-
-  const passRate = (
-    (passFailCount["PASS"] / testData.length) *
-    100
-  ).toFixed(1);
-
-  // ------------------ STYLE ------------------
-  const cardStyle =
-    "bg-white shadow-md rounded-xl p-6 flex flex-col items-center border border-gray-200";
+  const passFailData = [
+    { name: "PASS", value: passCount },
+    { name: "FAIL", value: failCount },
+  ];
 
   return (
-    <div className="p-10 bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-bold mb-10 text-gray-800">
-        Product Testing Analytics Dashboard
-      </h1>
+    <div style={styles.container}>
 
-      {/* ---------- SUMMARY CARDS ---------- */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-        <div className={cardStyle}>
-          <h3 className="text-lg font-semibold text-gray-600">Avg Hardness</h3>
-          <p className="text-3xl font-bold text-indigo-500">{avgHardness}</p>
+      <h1 style={styles.heading}>Product Testing Analytics Dashboard</h1>
+
+      {/* ===== TOP KPI CARDS ===== */}
+      <div style={styles.statsGrid}>
+        <div style={styles.card}>
+          <h3 style={styles.cardTitle}>Avg Hardness</h3>
+          <p style={styles.cardValue}>{avgHardness}</p>
         </div>
 
-        <div className={cardStyle}>
-          <h3 className="text-lg font-semibold text-gray-600">Avg Thickness</h3>
-          <p className="text-3xl font-bold text-green-500">{avgThickness} mm</p>
+        <div style={styles.card}>
+          <h3 style={styles.cardTitle}>Avg Thickness</h3>
+          <p style={styles.cardValue}>{avgThickness} mm</p>
         </div>
 
-        <div className={cardStyle}>
-          <h3 className="text-lg font-semibold text-gray-600">Avg Friction</h3>
-          <p className="text-3xl font-bold text-yellow-500">{avgFriction}</p>
+        <div style={styles.card}>
+          <h3 style={styles.cardTitle}>Avg Friction</h3>
+          <p style={styles.cardValue}>{avgFriction}</p>
         </div>
 
-        <div className={cardStyle}>
-          <h3 className="text-lg font-semibold text-gray-600">Pass Rate</h3>
-          <p className="text-3xl font-bold text-blue-500">{passRate}%</p>
-        </div>
-      </div>
-
-      {/* ---------- 2 COLUMN GRID ---------- */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-        {/* PASS/FAIL PIE CHART */}
-        <div className={cardStyle}>
-          <h2 className="text-2xl font-semibold mb-4">Pass vs Fail Distribution</h2>
-
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie data={passFailData} dataKey="value" outerRadius={110} label>
-                {passFailData.map((_, i) => (
-                  <Cell key={i} fill={COLORS[i % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
-
-          <p className="mt-3 text-gray-700 text-center">
-            Pass rate is <b>{passRate}%</b>, indicating overall component reliability.
-          </p>
-        </div>
-
-        {/* HARDNESS BAR CHART */}
-        <div className={cardStyle}>
-          <h2 className="text-2xl font-semibold mb-4">Hardness by Batch</h2>
-
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={hardnessData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="batch" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="hardness" fill="#A5B4FC" />
-            </BarChart>
-          </ResponsiveContainer>
-
-          <p className="mt-3 text-gray-700 text-center">
-            Batches with low hardness may indicate quality issues requiring recalibration.
-          </p>
-        </div>
-
-        {/* THICKNESS LINE CHART */}
-        <div className={cardStyle}>
-          <h2 className="text-2xl font-semibold mb-4">Thickness Variation</h2>
-
-          <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={thicknessData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="batch" />
-              <YAxis />
-              <Tooltip />
-              <Line type="monotone" dataKey="thickness" stroke="#86EFAC" strokeWidth={3} />
-            </LineChart>
-          </ResponsiveContainer>
-
-          <p className="mt-3 text-gray-700 text-center">
-            Monitoring thickness ensures structural stability and uniformity.
-          </p>
-        </div>
-
-        {/* FRICTION AREA CHART */}
-        <div className={cardStyle}>
-          <h2 className="text-2xl font-semibold mb-4">Friction Coefficient Analysis</h2>
-
-          <ResponsiveContainer width="100%" height={300}>
-            <AreaChart data={frictionData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="batch" />
-              <YAxis />
-              <Tooltip />
-              <Area
-                type="monotone"
-                dataKey="friction"
-                fill="#FCA5A5"
-                stroke="#FCA5A5"
-              />
-            </AreaChart>
-          </ResponsiveContainer>
-
-          <p className="mt-3 text-gray-700 text-center">
-            Friction variation helps predict material performance during braking or motion.
-          </p>
+        <div style={styles.card}>
+          <h3 style={styles.cardTitle}>Pass Rate</h3>
+          <p style={styles.cardValue}>{passRate}%</p>
         </div>
       </div>
 
-      {/* FULL WIDTH CHART */}
-      <div className={cardStyle + " mt-10"}>
-        <h2 className="text-2xl font-semibold mb-4">
-          Combined Performance Trend (Hardness vs Thickness)
-        </h2>
+      {/* ===== PASS vs FAIL PIE CHART ===== */}
+      <div style={styles.chartSection}>
+        <h2 style={styles.sectionTitle}>Pass vs Fail Distribution</h2>
+
+        <ResponsiveContainer width="100%" height={300}>
+          <PieChart>
+            <Pie
+              data={passFailData}
+              cx="50%"
+              cy="50%"
+              outerRadius={120}
+              dataKey="value"
+              label
+            >
+              {passFailData.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
+              ))}
+            </Pie>
+            <Tooltip />
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* ===== HARDNESS BAR CHART ===== */}
+      <div style={styles.chartSection}>
+        <h2 style={styles.sectionTitle}>Hardness Comparison by Batch</h2>
 
         <ResponsiveContainer width="100%" height={350}>
-          <LineChart data={testData}>
+          <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="Batch_ID" />
             <YAxis />
             <Tooltip />
-            <Line dataKey="Hardness" stroke="#93C5FD" strokeWidth={3} />
-            <Line dataKey="Thickness_mm" stroke="#FDE68A" strokeWidth={3} />
-          </LineChart>
+            <Bar dataKey="Hardness" fill="#90CAF9" />
+          </BarChart>
         </ResponsiveContainer>
-
-        <p className="mt-4 text-gray-700 text-center">
-          Combined metrics help identify outlier batches requiring re-testing.
-        </p>
       </div>
+
+      {/* ===== THICKNESS BAR CHART ===== */}
+      <div style={styles.chartSection}>
+        <h2 style={styles.sectionTitle}>Thickness Comparison by Batch</h2>
+
+        <ResponsiveContainer width="100%" height={350}>
+          <BarChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="Batch_ID" />
+            <YAxis />
+            <Tooltip />
+            <Bar dataKey="Thickness_mm" fill="#F48FB1" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* ===== FRICTION LINE CHART ===== */}
+      <div style={styles.chartSection}>
+        <h2 style={styles.sectionTitle}>Friction Coefficient Trend</h2>
+
+        <ResponsiveContainer width="100%" height={350}>
+          <BarChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="Batch_ID" />
+            <YAxis />
+            <Tooltip />
+            <Bar dataKey="Friction_Coefficient" fill="#A5D6A7" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
     </div>
   );
 }
+
+// ================= STYLES =================
+
+const styles = {
+  container: {
+    padding: "20px",
+    fontFamily: "Arial, sans-serif",
+    background: "#f3f5f7",
+    minHeight: "100vh",
+  },
+  heading: {
+    fontSize: "32px",
+    marginBottom: "20px",
+    color: "#333",
+    textAlign: "center",
+    fontWeight: 600,
+  },
+  statsGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    gap: "20px",
+    marginBottom: "30px",
+  },
+  card: {
+    background: "#fff",
+    padding: "20px",
+    borderRadius: "12px",
+    textAlign: "center",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+  },
+  cardTitle: {
+    fontSize: "15px",
+    color: "#666",
+    marginBottom: "5px",
+    fontWeight: 500,
+  },
+  cardValue: {
+    fontSize: "26px",
+    fontWeight: "bold",
+    color: "#333",
+  },
+  chartSection: {
+    marginTop: "40px",
+    padding: "25px",
+    background: "#fff",
+    borderRadius: "12px",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+  },
+  sectionTitle: {
+    fontSize: "22px",
+    marginBottom: "20px",
+    color: "#444",
+    fontWeight: 600,
+  },
+};
+
+export default Testing;
