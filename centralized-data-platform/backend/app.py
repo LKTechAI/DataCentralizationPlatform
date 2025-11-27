@@ -94,12 +94,6 @@ def get_testing():
     docs = db.collection("testing").stream()
     return jsonify([doc.to_dict() for doc in docs])
 
-# @app.route("/analysis/manufacturing", methods=["GET"])
-# def analyze_manufacturing():
-#     docs = db.collection("manufacturing").stream()
-#     data = [doc.to_dict() for doc in docs]
-#     return jsonify(summarize(data))
-
 @app.route("/analysis/sales", methods=["GET"])
 def analyze_sales():
     docs = db.collection("sales").stream()
@@ -118,23 +112,7 @@ def analyze_testing():
     data = [doc.to_dict() for doc in docs]
     return jsonify(summarize(data))
 
-# --- Manufacturing analysis endpoint (reads CSV directly) ---
-MANUFACTURING_CSV = r"D:\document\NIT Workspace\Synapse\centralized-data-platform\synthetic_data\manufacturing.csv"
-
-def _load_manufacturing_csv():
-    """Load CSV from disk, parse dates, coerce numeric types and return DataFrame."""
-    df = pd.read_csv(MANUFACTURING_CSV)
-    # ensure Date column is datetime
-    if "Date" in df.columns:
-        df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
-    # coerce numeric columns
-    for c in ["Production_Count", "Defective_Count", "Downtime_Minutes"]:
-        if c in df.columns:
-            df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0)
-    # ensure Machine_ID exists
-    if "Machine_ID" not in df.columns:
-        df["Machine_ID"] = "Unknown"
-    return df
+# --- Manufacturing analysis endpoint (reads CSV directly) --
 
 def _conclude_production_trend(series):
     """Simple textual conclusion for production trend."""
@@ -153,10 +131,26 @@ def _conclude_production_trend(series):
 
 @app.route("/analysis/manufacturing", methods=["GET"])
 def analysis_manufacturing():
-    try:
-        df = _load_manufacturing_csv()
-    except Exception as e:
-        return jsonify({"error": "Failed to load CSV", "details": str(e)}), 500
+
+    # ---- FETCH FROM FIRESTORE ----
+    docs = db.collection("manufacturing").stream()
+    rows = [doc.to_dict() for doc in docs]
+
+    if not rows:
+        return jsonify({"error": "No manufacturing data found"}), 404
+
+    df = pd.DataFrame(rows)
+
+    # ---- Ensure required fields exist ----
+    if "Date" in df.columns:
+        df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+
+    for c in ["Production_Count", "Defective_Count", "Downtime_Minutes"]:
+        if c in df.columns:
+            df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0)
+
+    if "Machine_ID" not in df.columns:
+        df["Machine_ID"] = "Unknown"
 
     # ---- DATE FILTERING ----
     start = request.args.get("start")
@@ -167,10 +161,10 @@ def analysis_manufacturing():
     if end:
         df = df[df["Date"] <= pd.to_datetime(end)]
 
-    # If no filter → default = most recent 10 days
+    # ---- DEFAULT: last 10 days ----
     if not start and not end:
         df = df.sort_values("Date")
-        last_dates = df["Date"].dt.date.unique()[-10:]  # last 10 unique days
+        last_dates = df["Date"].dt.date.unique()[-10:]
         df = df[df["Date"].dt.date.isin(last_dates)]
 
     # ---------------- KPIs ----------------
@@ -213,33 +207,20 @@ def analysis_manufacturing():
             "total_downtime": round(downtime, 1)
         })
 
-    # -------------- Downtime by Machine --------------
     downtime_by_machine = sorted(
-        [{"machine": m, "total_downtime": float(v)} for m, v in df.groupby("Machine_ID")["Downtime_Minutes"].sum().items()],
+        [{"machine": m, "total_downtime": float(v)} 
+         for m, v in df.groupby("Machine_ID")["Downtime_Minutes"].sum().items()],
         key=lambda x: x["total_downtime"], 
         reverse=True
     )
 
-    # ----------------- Sample (Recent 10 days only) -----------------
-    sample = df.sort_values("Date").tail(100)  # keep more, then reduce
-    sample = sample.groupby(sample["Date"].dt.date).head(5)  # 5 rows per day
+    sample = df.sort_values("Date").tail(100)
+    sample = sample.groupby(sample["Date"].dt.date).head(5)
     sample = sample.to_dict(orient="records")
 
-    # ------------------ Conclusions ------------------
     conclusions = [
         f"Total production: {total_production}, defects: {total_defects} (rate {defect_rate:.2f}%)."
     ]
-
-    def _trend(series):
-        if len(series) < 2:
-            return "Not enough data to infer trend."
-        pct_change = (series[-1] - series[0]) / (series[0] + 1e-9)
-        if pct_change > 0.02:
-            return f"Production increased by {pct_change*100:.1f}%."
-        if pct_change < -0.02:
-            return f"Production decreased by {abs(pct_change)*100:.1f}%."
-        return "Production stable."
-    conclusions.append(_trend(production_ts))
 
     result = {
         "kpis": {
@@ -260,6 +241,7 @@ def analysis_manufacturing():
     }
 
     return jsonify(result)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
