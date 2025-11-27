@@ -2,3 +2,4 @@ Flask
 Flask-CORS
 pandas
 firebase-admin
+gunicorn
