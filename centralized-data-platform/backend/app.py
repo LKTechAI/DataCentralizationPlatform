@@ -2,13 +2,14 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import firebase_admin
 from firebase_admin import credentials, firestore
-import os
 from utils.data_cleaning import clean_row
 from utils.analysis import summarize
 import pandas as pd
 import numpy as np
 from datetime import datetime
 from oop_demo.routes import oop_bp
+import os
+
 
 
 
@@ -17,7 +18,20 @@ CORS(app)
 app.register_blueprint(oop_bp, url_prefix="/oop_demo")
 
 # --- FIREBASE INITIALIZATION ---
-cred = credentials.Certificate("firebase_config.json")
+
+cred = credentials.Certificate({
+    "type": os.environ.get("FIREBASE_TYPE"),
+    "project_id": os.environ.get("FIREBASE_PROJECT_ID"),
+    "private_key_id": os.environ.get("FIREBASE_PRIVATE_KEY_ID"),
+    "private_key": os.environ.get("FIREBASE_PRIVATE_KEY").replace("\\n", "\n"),
+    "client_email": os.environ.get("FIREBASE_CLIENT_EMAIL"),
+    "client_id": os.environ.get("FIREBASE_CLIENT_ID"),
+    "auth_uri": os.environ.get("FIREBASE_AUTH_URI"),
+    "token_uri": os.environ.get("FIREBASE_TOKEN_URI"),
+    "auth_provider_x509_cert_url": os.environ.get("FIREBASE_AUTH_PROVIDER_CERT_URL"),
+    "client_x509_cert_url": os.environ.get("FIREBASE_CLIENT_CERT_URL")
+})
+
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
