@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://datacentralizationplatform.onrender.com", // your Flask backend
+  baseURL: "https://datacentralizationplatform.onrender.com/", // your Flask backend
   timeout: 10000
 });
 
