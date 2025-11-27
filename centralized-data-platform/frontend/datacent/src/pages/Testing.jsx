@@ -18,7 +18,7 @@ function Testing() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/testing")
+    fetch("https://datacentralizationplatform.onrender.com/testing")
       .then((res) => res.json())
       .then((d) => {
         // Convert values to numeric safely

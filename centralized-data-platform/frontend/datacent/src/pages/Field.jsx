@@ -27,7 +27,7 @@ export default function Field() {
   const [fieldData, setFieldData] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/field")
+    fetch("https://datacentralizationplatform.onrender.com/field")
       .then((res) => res.json())
       .then((data) => setFieldData(data))
       .catch((err) => console.error("Error loading field data", err));
